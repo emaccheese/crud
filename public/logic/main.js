@@ -1,0 +1,6 @@
+$.(function(){
+	$.("addNewClient").click(function(){
+		
+	});
+
+});

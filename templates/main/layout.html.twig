@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+   <div id="navbar" class="row">
+   	{{ include('nav.html.twig') }}
+   </div>
+   <div id="top" class="row">
+      {% block top_content %} {% endblock %}
+   </div>
+   <div id="mid" class="row">
+   	{% block mid_content %} {% endblock %}
+   </div>
+   <div id="bottom" class="row">
+   	{% block bottom_content %} {% endblock %}
+   </div>
+   <div id="footer" class="row">
+      {{ include('footer.html.twig') }}
+   </div>
+
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('logic/main.js') }}"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.2/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
+
+{% endblock %}
